@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3617349 */
+  src: url('iconfont.woff2?t=1662701889150') format('woff2'),
+       url('iconfont.woff?t=1662701889150') format('woff'),
+       url('iconfont.ttf?t=1662701889150') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-desktop-num:before {
+  content: "\e62b";
+}
+
+.icon-table-9:before {
+  content: "\e629";
+}
+
+.icon-table-12:before {
+  content: "\e62a";
+}
+
+.icon-input_reset:before {
+  content: "\e627";
+}
+
+.icon-reset:before {
+  content: "\e7fe";
+}
+
+.icon-korea:before {
+  content: "\e624";
+}
+
+.icon-usa:before {
+  content: "\e625";
+}
+
+.icon-japan:before {
+  content: "\e626";
+}
+
+.icon-chips-normal:before {
+  content: "\e622";
+}
+
+.icon-chips-black:before {
+  content: "\e61e";
+}
+
+.icon-chips-green:before {
+  content: "\e61b";
+}
+
+.icon-chips-purple:before {
+  content: "\e61c";
+}
+
+.icon-chips-red:before {
+  content: "\e61d";
+}
+
+.icon-a-checkBox2:before {
+  content: "\e616";
+}
+
+.icon-alert-circle-rect:before {
+  content: "\e617";
+}
+
+.icon-alert-circle:before {
+  content: "\e612";
+}
+
+.icon-circle-check:before {
+  content: "\e613";
+}
+
+.icon-logout:before {
+  content: "\e611";
+}
+
+.icon-edit-name:before {
+  content: "\e610";
+}
+
+.icon-key:before {
+  content: "\e60a";
+}
+
+.icon-sound:before {
+  content: "\e60c";
+}
+
+.icon-language:before {
+  content: "\e608";
+}
+
+.icon-support-agent:before {
+  content: "\e60b";
+}
+
+.icon-record-circle-line:before {
+  content: "\e840";
+}
+
+.icon-poker_style:before {
+  content: "\e602";
+}
+
+.icon-tips:before {
+  content: "\e603";
+}
+

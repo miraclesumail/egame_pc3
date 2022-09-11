@@ -1,0 +1,16 @@
+{
+  "error": {},
+  "common": {},
+  "home": {
+    "test": {
+      "user": {
+        "qq": "axiba"
+      }
+    }
+  },
+  "weather": {
+    "me": {
+      "qq": "wefwf"
+    }
+  }
+}
