@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  MutableRefObject,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { FC, MutableRefObject, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useEventEmitter, useSetState } from "ahooks";
@@ -40,6 +34,7 @@ interface Props {
 const GameContainer = styled(Column)`
   width: 603px;
   height: 618px;
+  position: relative;
 `;
 
 const GameHeader = styled(Row)`
@@ -213,18 +208,12 @@ const GameDesk: FC<Props> = ({ showTable, active, setActive }) => {
     <Desk>
       <Row style={{ width: "100%" }}>
         {topText.map(({ en, zn }) => (
-          <BetTop
-            {...{ en, zn, active, addChipsTodDesk, showTable, onAnimationend }}
-            key={en}
-          />
+          <BetTop {...{ en, zn, active, addChipsTodDesk, showTable, onAnimationend }} key={en} />
         ))}
       </Row>
       <Row style={{ width: "100%" }}>
         {botText.map(({ en, zn }, index) => (
-          <BetBottom
-            {...{ en, zn, active, addChipsTodDesk, index, showTable }}
-            key={en}
-          />
+          <BetBottom {...{ en, zn, active, addChipsTodDesk, index, showTable }} key={en} />
         ))}
       </Row>
     </Desk>
@@ -280,13 +269,14 @@ const GameDesk: FC<Props> = ({ showTable, active, setActive }) => {
         />
         <BtnGroups />
       </ColumnBot>
+      <ServiceModal />
     </GameContainer>
   );
 };
 
 // 经典投注ui
 const Index = () => {
-  const [{ visible, active,  results }, setState] = useSetState<any>({
+  const [{ visible, active, results }, setState] = useSetState<any>({
     visible: false,
     active: "",
     results: "bptqwefghijkbptqfwebpijk".split(""),
@@ -313,15 +303,11 @@ const Index = () => {
         {/* 视频直播区域 */}
         <FlvPlayer {...{ width: 1317, height: 618, id: "classic" }} />
         {/* 赌桌功能区 */}
-        <GameDesk
-          showTable={showTable}
-          active={active}
-          setActive={(active) => setState({ active })}
-        />
+        <GameDesk showTable={showTable} active={active} setActive={(active) => setState({ active })} />
       </Row>
       <Row justify="flex-start" style={{ width: "100%" }}>
         {/* 露珠图绘制区 */}
-        <RoadMap {...{ results, config }} ref={roadMapRef}/>
+        <RoadMap {...{ results, config }} ref={roadMapRef} />
         {/* <RoadMap1 dataSource={roundData} width={1720} ref={roadMapRef} /> */}
         {/* 台桌基本信息列表 */}
         <TableInfo {...{ width: 125, height: 296 }} />

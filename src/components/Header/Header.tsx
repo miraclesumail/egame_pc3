@@ -161,7 +161,7 @@ const Header: FC<Props> = () => {
         </Money>
       </Row>
       <div>
-        <HeaderRightGamingSingle/>
+        <RightMenu/>
         {/* {screen === 1 && <HeaderRightMultipleTable />}
         {screen === 2 && <HeaderRightGamingMultiple />}
         {screen === 3 && <HeaderRightGamingSingle />} */}

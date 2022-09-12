@@ -45,7 +45,7 @@ type CircleProps = {
   marginRight?: number;
 };
 
-const Container = styled.div<any>`
+const Container = styled(Column)<any>`
   width: ${({ type }: any) => `${type ? "412px" : "549px"}`};
   height: ${({ type }: any) => `${type ? "209px" : "278px"}`};
   /* width: 549px;
@@ -56,8 +56,8 @@ const Container = styled.div<any>`
 
 const TabelCell = styled(Column)`
   position: relative;
-  width: ${({ type }: any) => `${type ? "95%" : "95%"}`};
-  height: ${({ type }: any) => `${type ? "93%" : "95%"}`};
+  width: ${({ type }: any) => `${type ? "382px" : "524px"}`};
+  height: ${({ type }: any) => `${type ? "194px" : "265px"}`};
   background: #f0f0f0;
   border-radius: 8px 8px 0px 0px;
   overflow: hidden;

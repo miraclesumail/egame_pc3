@@ -1,14 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { formatResultList, initCanvas } from "@/utils/tool";
-import {
-  drawDishWay,
-  drawBigWay,
-  drawBigEyeWay,
-  drawSmallWay,
-  drawCockroachWay,
-} from "@/utils/drawRoad";
+import { drawDishWay, drawBigWay, drawBigEyeWay, drawSmallWay, drawCockroachWay } from "@/utils/drawRoad";
 import RoadCanvas from "@/components/roadCanvas";
+import DeskPick from "@/components/deskPick";
 import RoadMaps from "@/utils/roadmaps";
 
 const Container: any = styled.div`
@@ -167,6 +162,8 @@ const Index = () => {
   return (
     <Container>
       <RoadCanvas {...{ results, config }} />
+
+      <DeskPick count={18} />
       {/* <canvas ref={ref}></canvas> */}
     </Container>
   );

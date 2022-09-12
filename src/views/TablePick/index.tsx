@@ -9,6 +9,7 @@ import SelectBetting from "@/components/common/SelectBetting";
 import Table, { DeskStatus } from "./components/Table";
 import { ws } from "@/App";
 import RoadTip from "./components/roadTip";
+import DeskPick from '@/components/deskPick'
 import { useNavigate } from "react-router-dom";
 import { useSetState } from "ahooks";
 import { RootState, useAppSelector } from "@/store";
@@ -92,8 +93,18 @@ const TablePick = () => {
               style={{ width: "100%" }}
               key={index}
             >
+              {/* <DeskPick count={18}/>
+              <DeskPick count={18}/>
+              <DeskPick count={18}/>
+              <DeskPick count={18}/>
+              <DeskPick count={18}/>
+              <DeskPick count={18}/>
+              <DeskPick count={18}/> */}
+             
               {item.map((ele: any, index) => (
                 <Table key={index} {...{ ...ele, type: deskAmount === 12 }}></Table>
+                // <DeskPick count={18}/>
+
               ))}
             </Row>
           );

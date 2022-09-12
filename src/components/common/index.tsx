@@ -14,6 +14,7 @@ const Hollow = styled(Row)<any>`
 const Solid = styled(Column)<any>`
   width: ${({ width }: any) => `${width}px`};
   height: ${({ height }: any) => `${height}px`};
+  line-height: ${({ height }: any) => `${height}px`};
   border-radius: ${({ borderRadius, height }: any) =>
     `${borderRadius | (height / 2)}px`};
   background: ${({ background }: any) => background};

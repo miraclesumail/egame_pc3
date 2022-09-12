@@ -18,7 +18,7 @@ const HeaderRightGamingSingle:FC = () => {
   return (
     <Row style={{paddingRight: '28px'}}>
       <HeaderButton style={{marginLeft: '0'}} onClick={() => Modals.showSelectBetting({confirm: data => IStorage.setItem('betPreference',data)})}>桌台样式</HeaderButton>
-      {/* <HeaderButton style={{marginLeft: '25px'}} onClick={Modals.showTips}>小费</HeaderButton> */}
+      <HeaderButton style={{marginLeft: '25px'}} onClick={Modals.showTips}>小费</HeaderButton>
       <HeaderButton style={{marginLeft: '25px'}} onClick={Modals.showChipChose}>筹码样式</HeaderButton>
       <HeaderButton style={{marginLeft: '25px'}} onClick={() => dispatch(setShowTablePick(true))}>换桌台</HeaderButton>
       <HeaderButton style={{marginLeft: '25px'}} onClick={() => routerNav(-1)}>返回</HeaderButton>

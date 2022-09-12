@@ -64,7 +64,7 @@ const MovingItem: ForwardRefExoticComponent<Props> = forwardRef<HTMLElement, Pro
 
 const defaultOptions = {
   // timing options
-  duration: 600,
+  duration: 400,
   easing: "ease-in-out",
 };
 
