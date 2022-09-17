@@ -41,6 +41,17 @@ const FlvPlayer: FC<any> = ({width, height, id}) => {
        */
       // player.setTimeout(10);
 
+       document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+          // console.log("visiblevisiblevisiblevisible");
+          player.start(flv);
+
+        } else {
+          console.log("hiddenhiddenhiddenhiddenhidden");
+          player.stop();
+        }
+      });
+
       player.on("start", () => {
         console.log("player on start");
       });
