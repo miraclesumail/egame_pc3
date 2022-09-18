@@ -253,3 +253,32 @@ export function animateEle(ele: HTMLElement, animateParams, onFinish) {
 
   return () => (animation as Animation).cancel();
 }
+
+/**
+ * 
+ * @param count 重复次数
+ * @param fns 函数数组
+ * @param interval 间隔
+ */
+export function repeatFn(count: number, fns: Array<(data?: any) => void>, interval: number = 1000) {
+  if (!count) return;
+
+  const localFns = [...fns];
+
+  function execute() {
+    const fn = localFns.shift();
+    if (!fn) {
+      count--;
+      repeatFn(count, fns, interval);
+      return;
+    }
+
+    fn();
+    const timer = setTimeout(() => {
+      execute();
+      clearTimeout(timer);
+    }, interval);
+  }
+
+  execute();
+}
