@@ -54,6 +54,18 @@ const Index: FC<Props> = ({
   const onClick = () => {
     Communicator.action("addChips", { category, store });
   };
+  
+   if (category === BetType.BANKER) {
+      console.log(ref.current, "dsfwfwqef--00");
+      repeatFn(
+        3,
+        [
+          () => (ref.current as HTMLElement).classList.add("active"),
+          () => (ref.current as HTMLElement).classList.remove("active"),
+        ],
+        500
+      );
+    }
 
   return (
     <HoverG
